@@ -43,6 +43,7 @@
   <project remote="origin" name="kernel-dsp-devicetree" path="vendor/qcom/opensource/dsp-devicetree" revision="refs/tags/MMI-W3WB36.36-48-5" />
   <project remote="origin" name="kernel-eSE-devicetree" path="vendor/qcom/opensource/eSE-devicetree" revision="refs/tags/MMI-W3WB36.36-48-5" />
   <project remote="origin" name="kernel-eva-devicetree" path="vendor/qcom/opensource/eva-devicetree" revision="refs/tags/MMI-W3WB36.36-48-5" />
+  <project remote="origin" name="kernel-biometrics-fingerprint-devicetree" path="vendor/qcom/opensource/fingerprint-devicetree" revision="refs/tags/MMI-W3WB36.36-48-5" />
   <project remote="origin" name="kernel-graphics-devicetree" path="vendor/qcom/opensource/graphics-devicetree" revision="refs/tags/MMI-W3WB36.36-48-5" />
   <project remote="origin" name="kernel-mm-devicetree" path="vendor/qcom/opensource/mm-devicetree" revision="refs/tags/MMI-W3WB36.36-48-5" />
   <project remote="origin" name="kernel-mmrm-devicetree" path="vendor/qcom/opensource/mmrm-devicetree" revision="refs/tags/MMI-W3WB36.36-48-5" />
@@ -72,9 +73,14 @@
   <project remote="origin" name="vendor-qcom-opensource-wlan-qca-wifi-host-cmn" path="vendor/qcom/opensource/wlan/qca-wifi-host-cmn" revision="refs/tags/MMI-W3WB36.36-48-5" />
   <project remote="origin" name="vendor-qcom-opensource-wlan-qcacld-3.0" path="vendor/qcom/opensource/wlan/qcacld-3.0" revision="refs/tags/MMI-W3WB36.36-48-5" />
 
+  <project remote="clo-la" name="platform/vendor/qcom/opensource/datarmnet" path="vendor/qcom/opensource/datarmnet" revision="data-kernel.lnx.5.0.r1-rel" />
+  <project remote="clo-la" name="platform/vendor/qcom/opensource/datarmnet-ext" path="vendor/qcom/opensource/datarmnet-ext" revision="data-kernel.lnx.5.0.r1-rel" />
+  <project remote="clo-la" name="platform/vendor/qcom-opensource/fingerprint" path="vendor/qcom/opensource/fingerprint" revision="fingerprint.lnx.16.0.r1-rel" />
+  <project remote="clo-la" name="platform/vendor/opensource/touch-drivers" path="vendor/qcom/opensource/touch-drivers" revision="touch-kernel.lnx.11.0.r11-rel" />
   <project remote="clo-la" name="platform/vendor/opensource/mm-drivers" path="vendor/qcom/opensource/mm-drivers" revision="display-kernel.lnx.12.0.r2-rel" />
   <project remote="clo-la" name="platform/vendor/opensource/mmrm-driver-test" path="vendor/qcom/opensource/mmrm-driver-test" revision="mmrm-kernel-handset.lnx.1.0.r2-rel" />
   <project remote="clo-la" name="platform/vendor/opensource/mmrm-driver" path="vendor/qcom/opensource/mmrm-driver" revision="mmrm-kernel-handset.lnx.1.0.r2-rel" />
+  <project remote="clo-la" name="platform/vendor/qcom/opensource/securemsm-devicetree" path="vendor/qcom/opensource/securemsm-devicetree" revision="sec-kernel.lnx.14.0.r34-rel" />
   <project remote="clo-la" name="platform/vendor/opensource/video-driver" path="vendor/qcom/opensource/video-driver" revision="video-kernel-handset.lnx.1.0.r2-rel" />
   <project remote="clo-la" name="platform/vendor/nxp/opensource/driver" path="vendor/nxp/opensource/driver" revision="nfc-driver.lnx.16.0.r1-rel" />
   <project remote="clo-la" name="platform/vendor/st/opensource/driver" path="vendor/st/opensource/driver" revision="nfc-st-driver.lnx.16.0.r1-rel" />
