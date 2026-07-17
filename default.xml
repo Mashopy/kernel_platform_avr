@@ -7,7 +7,7 @@
 
   <superproject name="kernel/superproject" remote="aosp" revision="common-android16-6.12-2025-12" />
 
-  <project path="build/kernel" name="kernel/build" groups="ddk">
+  <project remote="origin" name="kernel_platform-build-kernel" path="build/kernel" revision="refs/tags/MMI-W3WB36.36-48-5" >
     <linkfile src="kleaf/bazel.sh" dest="tools/bazel" />
     <linkfile src="kleaf/bzlmod/bazel.MODULE.bazel" dest="MODULE.bazel" />
     <linkfile src="kleaf/bzlmod/bazel.WORKSPACE.bzlmod" dest="WORKSPACE.bzlmod" />
@@ -24,7 +24,17 @@
     <linkfile dest="build/qcom_build_extensions" src="qcom_build_extensions"/>
   </project>
 
-  <project remote="origin" name="kernel-devicetree" path="qcom/opensource/devicetree" revision="refs/tags/MMI-W3WB36.36-48-5" />
+  <project remote="origin" name="kernel_platform-build-bazel_common_rules" path="build/bazel_common_rules" revision="refs/tags/MMI-W3WB36.36-48-5" />
+  <project remote="origin" name="kernel_platform-external-bazelbuild-platforms" path="external/bazelbuild/platforms" revision="refs/tags/MMI-W3WB36.36-48-5" />
+  <project remote="origin" name="kernel_platform-external-bazelbuild-rules_cc" path="external/bazelbuild/rules_cc" revision="refs/tags/MMI-W3WB36.36-48-5" />
+  <project remote="origin" name="kernel_platform-external-bazelbuild-rules_license" path="external/bazelbuild/rules_license" revision="refs/tags/MMI-W3WB36.36-48-5" />
+  <project remote="origin" name="kernel_platform-external-bazelbuild-rules_pkg" path="external/bazelbuild/rules_pkg" revision="refs/tags/MMI-W3WB36.36-48-5" />
+  <project remote="origin" name="kernel_platform-external-bazelbuild-rules_python" path="external/bazelbuild/rules_python" revision="refs/tags/MMI-W3WB36.36-48-5" />
+  <project remote="origin" name="kernel_platform-external-bazelbuild-rules_shell" path="external/bazelbuild/rules_shell" revision="refs/tags/MMI-W3WB36.36-48-5" />
+  <project remote="origin" name="kernel_platform-external-bazelbuild-bazel-central-registry" path="external/bazelbuild/bazel-central-registry" revision="refs/tags/MMI-W3WB36.36-48-5" />
+  <project remote="origin" name="kernel_platform-external-bazel-contrib-bazel_features" path="external/bazel-contrib/bazel_features" revision="refs/tags/MMI-W3WB36.36-48-5" />
+
+  <project remote="origin" name="kernel-devicetree" path="soc-repo/arch/arm64/boot/dts/vendor" revision="refs/tags/MMI-W3WB36.36-48-5" />
   <project remote="origin" name="kernel-audio-devicetree" path="vendor/qcom/opensource/audio-devicetree" revision="refs/tags/MMI-W3WB36.36-48-5" />
   <project remote="origin" name="kernel-bt-devicetree" path="vendor/qcom/opensource/bt-devicetree" revision="refs/tags/MMI-W3WB36.36-48-5" />
   <project remote="origin" name="kernel-camera-devicetree" path="vendor/qcom/opensource/camera-devicetree" revision="refs/tags/MMI-W3WB36.36-48-5" />
@@ -44,10 +54,12 @@
   <project remote="origin" name="kernel-display-devicetree" path="vendor/qcom/proprietary/display-devicetree" revision="refs/tags/MMI-W3WB36.36-48-5" />
   <project remote="origin" name="kernel-mm-devicetree" path="vendor/qcom/proprietary/mm-devicetree" revision="refs/tags/MMI-W3WB36.36-48-5" />
 
+  <project remote="origin" name="kernel-external-dtc" path="external/qcom-dtc" revision="refs/tags/MMI-W3WB36.36-48-5" />
   <project remote="origin" name="vendor-qcom-opensource-audio-kernel" path="vendor/qcom/opensource/audio-kernel" revision="refs/tags/MMI-W3WB36.36-48-5" />
   <project remote="origin" name="vendor-qcom-opensource-bt-kernel" path="vendor/qcom/opensource/bt-kernel" revision="refs/tags/MMI-W3WB36.36-48-5" />
   <project remote="origin" name="vendor-qcom-opensource-camera-kernel" path="vendor/qcom/opensource/camera-kernel" revision="refs/tags/MMI-W3WB36.36-48-5" />
   <project remote="origin" name="vendor-qcom-opensource-data-kernel" path="vendor/qcom/opensource/data-kernel" revision="refs/tags/MMI-W3WB36.36-48-5" />
+  <project remote="origin" name="kernel-msm-techpack-dataipa" path="vendor/qcom/opensource/dataipa" revision="refs/tags/MMI-W3WB36.36-48-5" />
   <project remote="origin" name="kernel-msm-5.4-techpack-display" path="vendor/qcom/opensource/display-drivers" revision="refs/tags/MMI-W3WB36.36-48-5" />
   <project remote="origin" name="vendor-qcom-opensource-dsp-kernel" path="vendor/qcom/opensource/dsp-kernel" revision="refs/tags/MMI-W3WB36.36-48-5" />
   <project remote="origin" name="vendor-qcom-opensource-eva-kernel" path="vendor/qcom/opensource/eva-kernel" revision="refs/tags/MMI-W3WB36.36-48-5" />
