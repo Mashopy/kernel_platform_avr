@@ -2,6 +2,7 @@
 <manifest>
   <remote name="aosp" fetch="https://android-review.googlesource.com/" />
   <remote name="origin" fetch="https://github.com/MotorolaMobilityLLC" />
+  <remote name="clo-la" fetch="https://git.codelinaro.org/clo/la" />
   <default revision="main-kernel-2025" remote="aosp" sync-j="4" />
 
   <superproject name="kernel/superproject" remote="aosp" revision="common-android16-6.12-2025-12" />
@@ -51,21 +52,21 @@
   <project remote="origin" name="vendor-qcom-opensource-dsp-kernel" path="vendor/qcom/opensource/dsp-kernel" revision="refs/tags/MMI-W3WB36.36-48-5" />
   <project remote="origin" name="vendor-qcom-opensource-eva-kernel" path="vendor/qcom/opensource/eva-kernel" revision="refs/tags/MMI-W3WB36.36-48-5" />
   <project remote="origin" name="vendor-qcom-opensource-graphics-kernel" path="vendor/qcom/opensource/graphics-kernel" revision="refs/tags/MMI-W3WB36.36-48-5" />
-  <project remote="origin" name="vendor-qcom-opensource-mm-drivers" path="vendor/qcom/opensource/mm-drivers" revision="refs/tags/MMI-W3WB36.36-48-5" />
-  <project remote="origin" name="vendor-qcom-opensource-mmrm-driver-test" path="vendor/qcom/opensource/mmrm-driver-test" revision="refs/tags/MMI-W3WB36.36-48-5" />
-  <project remote="origin" name="vendor-qcom-opensource-mmrm-driver" path="vendor/qcom/opensource/mmrm-driver" revision="refs/tags/MMI-W3WB36.36-48-5" />
   <project remote="origin" name="vendor-qcom-opensource-securemsm-kernel" path="vendor/qcom/opensource/securemsm-kernel" revision="refs/tags/MMI-W3WB36.36-48-5" />
   <project remote="origin" name="vendor-qcom-opensource-spu-kernel" path="vendor/qcom/opensource/spu-kernel" revision="refs/tags/MMI-W3WB36.36-48-5" />
   <project remote="origin" name="vendor-qcom-opensource-synx-kernel" path="vendor/qcom/opensource/synx-kernel" revision="refs/tags/MMI-W3WB36.36-48-5" />
-  <project remote="origin" name="vendor-qcom-opensource-video-driver" path="vendor/qcom/opensource/video-driver" revision="refs/tags/MMI-W3WB36.36-48-5" />
   <project remote="origin" name="vendor-qcom-opensource-wlan-fw-api" path="vendor/qcom/opensource/wlan/fw-api" revision="refs/tags/MMI-W3WB36.36-48-5" />
   <project remote="origin" name="vendor-qcom-opensource-wlan-platform" path="vendor/qcom/opensource/wlan/platform" revision="refs/tags/MMI-W3WB36.36-48-5" />
   <project remote="origin" name="vendor-qcom-opensource-wlan-qca-wifi-host-cmn" path="vendor/qcom/opensource/wlan/qca-wifi-host-cmn" revision="refs/tags/MMI-W3WB36.36-48-5" />
   <project remote="origin" name="vendor-qcom-opensource-wlan-qcacld-3.0" path="vendor/qcom/opensource/wlan/qcacld-3.0" revision="refs/tags/MMI-W3WB36.36-48-5" />
 
-  <project remote="origin" name="vendor-nxp-opensource-driver" path="vendor/nxp/opensource/driver" revision="refs/tags/MMI-W3WB36.36-48-5" />
-  <project remote="origin" name="vendor-st-opensource-driver" path="vendor/st/opensource/driver" revision="refs/tags/MMI-W3WB36.36-48-5" />
-  <project remote="origin" name="vendor-st-opensource-eSE-driver" path="vendor/st/opensource/eSE-driver" revision="refs/tags/MMI-W3WB36.36-48-5" />
+  <project remote="clo-la" name="platform/vendor/opensource/mm-drivers" path="vendor/qcom/opensource/mm-drivers" revision="display-kernel.lnx.12.0.r2-rel" />
+  <project remote="clo-la" name="platform/vendor/opensource/mmrm-driver-test" path="vendor/qcom/opensource/mmrm-driver-test" revision="mmrm-kernel-handset.lnx.1.0.r2-rel" />
+  <project remote="clo-la" name="platform/vendor/opensource/mmrm-driver" path="vendor/qcom/opensource/mmrm-driver" revision="mmrm-kernel-handset.lnx.1.0.r2-rel" />
+  <project remote="clo-la" name="platform/vendor/opensource/video-driver" path="vendor/qcom/opensource/video-driver" revision="video-kernel-handset.lnx.1.0.r2-rel" />
+  <project remote="clo-la" name="platform/vendor/nxp/opensource/driver" path="vendor/nxp/opensource/driver" revision="nfc-driver.lnx.16.0.r1-rel" />
+  <project remote="clo-la" name="platform/vendor/st/opensource/driver" path="vendor/st/opensource/driver" revision="nfc-st-driver.lnx.16.0.r1-rel" />
+  <project remote="clo-la" name="platform/vendor/st/opensource/eSE-driver" path="vendor/st/opensource/eSE-driver" revision="ese-st-vendor.lnx.16.0.r1-rel" />
 
   <project remote="origin" name="motorola-kernel-modules" path="motorola/kernel/modules" revision="refs/tags/MMI-W3WB36.36-48-5" />
 
