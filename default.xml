@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <remote name="aosp" fetch=".." review="https://android-review.googlesource.com/" />
+  <remote name="aosp" fetch="https://android-review.googlesource.com/" />
+  <remote name="origin" fetch="https://github.com/MotorolaMobilityLLC" />
   <default revision="main-kernel-2025" remote="aosp" sync-j="4" />
 
   <superproject name="kernel/superproject" remote="aosp" revision="common-android16-6.12-2025-12" />
@@ -10,7 +11,64 @@
     <linkfile src="kleaf/bzlmod/bazel.MODULE.bazel" dest="MODULE.bazel" />
     <linkfile src="kleaf/bzlmod/bazel.WORKSPACE.bzlmod" dest="WORKSPACE.bzlmod" />
   </project>
-  <project path="common" name="kernel/common" revision="android16-6.12-2025-12" upstream="android16-6.12-2025-12" dest-branch="android16-6.12-2025-12" />
+  <project path="common" name="kernel/common" revision="android16-6.12-2025-12" upstream="android16-6.12-2025-12" dest-branch="android16-6.12-2025-12">
+    <linkfile dest=".source_date_epoch_dir" src="."/>
+  </project>
+
+  <!-- Motorola / MSM edits -->
+  <project remote="origin" name="kernel-msm" path="soc-repo" revision="refs/tags/MMI-W3WB36.36-48-5">
+    <linkfile dest="WORKSPACE" src="bazel.WORKSPACE"/>
+    <linkfile dest="build_with_bazel.py" src="build_with_bazel.py"/>
+    <linkfile dest="device.bazelrc" src="device.bazelrc"/>
+    <linkfile dest="build/qcom_build_extensions" src="qcom_build_extensions"/>
+  </project>
+
+  <project remote="origin" name="kernel-devicetree" path="qcom/opensource/devicetree" revision="refs/tags/MMI-W3WB36.36-48-5" />
+  <project remote="origin" name="kernel-audio-devicetree" path="vendor/qcom/opensource/audio-devicetree" revision="refs/tags/MMI-W3WB36.36-48-5" />
+  <project remote="origin" name="kernel-bt-devicetree" path="vendor/qcom/opensource/bt-devicetree" revision="refs/tags/MMI-W3WB36.36-48-5" />
+  <project remote="origin" name="kernel-camera-devicetree" path="vendor/qcom/opensource/camera-devicetree" revision="refs/tags/MMI-W3WB36.36-48-5" />
+  <project remote="origin" name="kernel-data-devicetree" path="vendor/qcom/opensource/data-devicetree" revision="refs/tags/MMI-W3WB36.36-48-5" />
+  <project remote="origin" name="kernel-display-devicetree" path="vendor/qcom/opensource/display-devicetree" revision="refs/tags/MMI-W3WB36.36-48-5" />
+  <project remote="origin" name="kernel-dsp-devicetree" path="vendor/qcom/opensource/dsp-devicetree" revision="refs/tags/MMI-W3WB36.36-48-5" />
+  <project remote="origin" name="kernel-eSE-devicetree" path="vendor/qcom/opensource/eSE-devicetree" revision="refs/tags/MMI-W3WB36.36-48-5" />
+  <project remote="origin" name="kernel-eva-devicetree" path="vendor/qcom/opensource/eva-devicetree" revision="refs/tags/MMI-W3WB36.36-48-5" />
+  <project remote="origin" name="kernel-graphics-devicetree" path="vendor/qcom/opensource/graphics-devicetree" revision="refs/tags/MMI-W3WB36.36-48-5" />
+  <project remote="origin" name="kernel-mm-devicetree" path="vendor/qcom/opensource/mm-devicetree" revision="refs/tags/MMI-W3WB36.36-48-5" />
+  <project remote="origin" name="kernel-mmrm-devicetree" path="vendor/qcom/opensource/mmrm-devicetree" revision="refs/tags/MMI-W3WB36.36-48-5" />
+  <project remote="origin" name="kernel-nfc-devicetree" path="vendor/qcom/opensource/nfc-devicetree" revision="refs/tags/MMI-W3WB36.36-48-5" />
+  <project remote="origin" name="kernel-synx-devicetree" path="vendor/qcom/opensource/synx-devicetree" revision="refs/tags/MMI-W3WB36.36-48-5" />
+  <project remote="origin" name="kernel-video-devicetree" path="vendor/qcom/opensource/video-devicetree" revision="refs/tags/MMI-W3WB36.36-48-5" />
+  <project remote="origin" name="kernel-wlan-devicetree" path="vendor/qcom/opensource/wlan/wlan-devicetree" revision="refs/tags/MMI-W3WB36.36-48-5" />
+
+  <project remote="origin" name="kernel-display-devicetree" path="vendor/qcom/proprietary/display-devicetree" revision="refs/tags/MMI-W3WB36.36-48-5" />
+  <project remote="origin" name="kernel-mm-devicetree" path="vendor/qcom/proprietary/mm-devicetree" revision="refs/tags/MMI-W3WB36.36-48-5" />
+
+  <project remote="origin" name="vendor-qcom-opensource-audio-kernel" path="vendor/qcom/opensource/audio-kernel" revision="refs/tags/MMI-W3WB36.36-48-5" />
+  <project remote="origin" name="vendor-qcom-opensource-bt-kernel" path="vendor/qcom/opensource/bt-kernel" revision="refs/tags/MMI-W3WB36.36-48-5" />
+  <project remote="origin" name="vendor-qcom-opensource-camera-kernel" path="vendor/qcom/opensource/camera-kernel" revision="refs/tags/MMI-W3WB36.36-48-5" />
+  <project remote="origin" name="vendor-qcom-opensource-data-kernel" path="vendor/qcom/opensource/data-kernel" revision="refs/tags/MMI-W3WB36.36-48-5" />
+  <project remote="origin" name="kernel-msm-5.4-techpack-display" path="vendor/qcom/opensource/display-drivers" revision="refs/tags/MMI-W3WB36.36-48-5" />
+  <project remote="origin" name="vendor-qcom-opensource-dsp-kernel" path="vendor/qcom/opensource/dsp-kernel" revision="refs/tags/MMI-W3WB36.36-48-5" />
+  <project remote="origin" name="vendor-qcom-opensource-eva-kernel" path="vendor/qcom/opensource/eva-kernel" revision="refs/tags/MMI-W3WB36.36-48-5" />
+  <project remote="origin" name="vendor-qcom-opensource-graphics-kernel" path="vendor/qcom/opensource/graphics-kernel" revision="refs/tags/MMI-W3WB36.36-48-5" />
+  <project remote="origin" name="vendor-qcom-opensource-mm-drivers" path="vendor/qcom/opensource/mm-drivers" revision="refs/tags/MMI-W3WB36.36-48-5" />
+  <project remote="origin" name="vendor-qcom-opensource-mmrm-driver-test" path="vendor/qcom/opensource/mmrm-driver-test" revision="refs/tags/MMI-W3WB36.36-48-5" />
+  <project remote="origin" name="vendor-qcom-opensource-mmrm-driver" path="vendor/qcom/opensource/mmrm-driver" revision="refs/tags/MMI-W3WB36.36-48-5" />
+  <project remote="origin" name="vendor-qcom-opensource-securemsm-kernel" path="vendor/qcom/opensource/securemsm-kernel" revision="refs/tags/MMI-W3WB36.36-48-5" />
+  <project remote="origin" name="vendor-qcom-opensource-spu-kernel" path="vendor/qcom/opensource/spu-kernel" revision="refs/tags/MMI-W3WB36.36-48-5" />
+  <project remote="origin" name="vendor-qcom-opensource-synx-kernel" path="vendor/qcom/opensource/synx-kernel" revision="refs/tags/MMI-W3WB36.36-48-5" />
+  <project remote="origin" name="vendor-qcom-opensource-video-driver" path="vendor/qcom/opensource/video-driver" revision="refs/tags/MMI-W3WB36.36-48-5" />
+  <project remote="origin" name="vendor-qcom-opensource-wlan-fw-api" path="vendor/qcom/opensource/wlan/fw-api" revision="refs/tags/MMI-W3WB36.36-48-5" />
+  <project remote="origin" name="vendor-qcom-opensource-wlan-platform" path="vendor/qcom/opensource/wlan/platform" revision="refs/tags/MMI-W3WB36.36-48-5" />
+  <project remote="origin" name="vendor-qcom-opensource-wlan-qca-wifi-host-cmn" path="vendor/qcom/opensource/wlan/qca-wifi-host-cmn" revision="refs/tags/MMI-W3WB36.36-48-5" />
+  <project remote="origin" name="vendor-qcom-opensource-wlan-qcacld-3.0" path="vendor/qcom/opensource/wlan/qcacld-3.0" revision="refs/tags/MMI-W3WB36.36-48-5" />
+
+  <project remote="origin" name="vendor-nxp-opensource-driver" path="vendor/nxp/opensource/driver" revision="refs/tags/MMI-W3WB36.36-48-5" />
+  <project remote="origin" name="vendor-st-opensource-driver" path="vendor/st/opensource/driver" revision="refs/tags/MMI-W3WB36.36-48-5" />
+  <project remote="origin" name="vendor-st-opensource-eSE-driver" path="vendor/st/opensource/eSE-driver" revision="refs/tags/MMI-W3WB36.36-48-5" />
+
+  <project remote="origin" name="motorola-kernel-modules" path="motorola/kernel/modules" revision="refs/tags/MMI-W3WB36.36-48-5" />
+
   <!-- Uncomment for local testing only -->
   <!-- project path="kernel/tests" name="kernel/tests" revision="main-kernel" clone-depth="1" / -->
   <project path="common-modules/trusty" name="kernel/common-modules/trusty" />
